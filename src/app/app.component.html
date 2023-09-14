@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio Clase 1</title>
+</head>
+<body>
+  <h3>Ejercicio 1: Realizar una aplicación que se le ingresen dos edades en dos cuadro de textos
+    edadUno, edadDos
+    mostrar el promedio y la suma en dos cuadros de textos nuevos
+    botones "calcular" y "limpiar cuadros de textos"</h3>
+    <input type="number" [(ngModel)]="edadUnoStr" placeholder="Ingrese la primer edad:">
+    <br>
+    <input type="number" [(ngModel)]="edadDosStr" placeholder="Ingrese la segunda edad:">
+    <br>
+    <div id="botones">
+      <input type="button" value="Calcular" (click)="calcularOperaciones($event)">
+      <input type="button" value="Limpiar" (click)="limpiarDatos($event)">
+    </div>
+    <br>
+    <h3>Resultado:</h3>
+    <label>Promedio:<input type="text" [(ngModel)]="promedioStr" placeholder="Promedio Edades" readonly></label>
+    <br>
+    <label>Suma:<input type="text" [(ngModel)]="sumaStr" placeholder="Suma Edades" readonly></label>
+    <p> {{mensaje}} </p>
+    <h3>Ejercicio 3:Hacer la navegación de todos los componentes, incluyendo la page de error</h3>
+    <input type="button" value="Login" (click)="navigate('login')">
+    <input type="button" value="Bienvenido" (click)="navigate('bienvenido')">
+    <input type="button" value="Error" (click)="navigate('error')">
+    
+</body>
+<router-outlet></router-outlet>
+</html>
